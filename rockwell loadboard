@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rockwell Loadboard — Rockwell Ventures</title>
+  <meta name="description" content="Rockwell Loadboard — Post loads, find trucks, and connect shippers with verified carriers.">
+  <style>
+    :root{
+      --bg:#f5f5f5;--card:#ffffff;--muted:#6b7280;
+      --accent:#374151;--accent-2:#111827;
+      --radius:12px;--maxw:1200px;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+    .title{font-weight:700;font-size:20px}
+    nav{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid #d1d5db;color:var(--accent-2)}
+    .hero{display:grid;grid-template-columns:1fr 400px;gap:20px;align-items:center;padding:30px 0}
+    .hero img{width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 4px 14px rgba(0,0,0,0.06)}
+    h2{margin:0 0 10px}
+    input,select{padding:10px;border-radius:8px;border:1px solid #d1d5db;width:100%}
+    .search-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+    .listings{margin-top:20px}
+    .listing{display:flex;justify-content:space-between;align-items:center;padding:14px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:12px;background:#fff}
+    .truck{width:60px;height:44px;background:#e5e7eb;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#374151}
+    footer{text-align:center;color:#6b7280;font-size:14px;padding:20px 0;margin-top:40px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">RV</div>
+        <div class="title">Rockwell Loadboard</div>
+      </div>
+      <nav>
+        <button class="btn ghost">Browse Loads</button>
+        <button class="btn">Post Load</button>
+        <button class="btn">Register Truck</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2>Find loads & trucks instantly</h2>
+        <p>Connecting shippers with reliable carriers across Southern Africa. Post a load, find a truck, or rent one today.</p>
+        <div class="search-row">
+          <input placeholder="Origin">
+          <input placeholder="Destination">
+          <select>
+            <option>All Commodities</option>
+            <option>Manganese</option>
+            <option>Chrome</option>
+            <option>Fertilizer</option>
+          </select>
+          <button class="btn">Search</button>
+        </div>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/15/ship-1868262_1280.jpg" alt="Truck and ship">
+    </section>
+
+    <div class="card">
+      <h3>Latest Loads</h3>
+      <div class="listings">
+        <div class="listing">
+          <div class="meta">
+            <div class="truck">34T</div>
+            <div>
+              <div><strong>Durban → Maputo</strong></div>
+              <div style="color:#6b7280;font-size:14px">Fertilizer • 546 km • 10 trucks</div>
+            </div>
+          </div>
+          <div><strong>R770/ton</strong></div>
+        </div>
+        <div class="listing">
+          <div class="meta">
+            <div class="truck">34T</div>
+            <div>
+              <div><strong>Maputo → City Deep</strong></div>
+              <div style="color:#6b7280;font-size:14px">Reject Chrome • 560 km • 8 trucks</div>
+            </div>
+          </div>
+          <div><strong>R600/ton</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Rockwell Ventures — Freight Brokerage Platform
+    </footer>
+  </div>
+</body>
+</html>
